@@ -1,3 +1,5 @@
+module Lists (listFuncs) where
+
 -- Lists
 teams = ["red", "yellow", "purple", "green", "black"]
 
@@ -43,8 +45,8 @@ newGeneratedListOverRangeWithStepping = [1,3..10]
 -- Get value in a list by index
 valueAtIndexTwo = [4,5,2,6,9] !! 2
 
-main :: IO()
-main = do
+listFuncs :: IO ()
+listFuncs = do
     print headOfTeamsList
     print tailsOfTeamsList
     print newCreatedList
