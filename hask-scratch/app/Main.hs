@@ -2,6 +2,7 @@ module Main where
 
 import Lists
 import EuclidGCD
+import ListComprehensions
 
 main :: IO ()
 main = do
@@ -11,3 +12,6 @@ main = do
   print "###### Euclid Greatest Common Divisor (GCD) ###########"
   euclidGcd
   print "#############################"
+  print "##### List Comprehensions ############"
+  listComprehensionsExamples
+  print "#########################################"
