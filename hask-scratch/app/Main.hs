@@ -17,3 +17,4 @@ main = do
   listComprehensionsExamples
   print "#########################################"
   patternMatching
+  guards
