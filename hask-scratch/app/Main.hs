@@ -3,6 +3,7 @@ module Main where
 import Lists
 import EuclidGCD
 import ListComprehensions
+import Functions
 
 main :: IO ()
 main = do
@@ -15,3 +16,4 @@ main = do
   print "##### List Comprehensions ############"
   listComprehensionsExamples
   print "#########################################"
+  patternMatching
