@@ -4,6 +4,7 @@ import Lists
 import EuclidGCD
 import ListComprehensions
 import Functions
+import RecursiveFunctions
 
 main :: IO ()
 main = do
@@ -18,3 +19,4 @@ main = do
   print "#########################################"
   patternMatching
   guards
+  recFuncExamples
