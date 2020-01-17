@@ -4,6 +4,7 @@ import Lists
 import EuclidGCD
 import ListComprehensions
 import Functions
+import DataTypes
 import RecursiveFunctions
 
 main :: IO ()
@@ -20,3 +21,4 @@ main = do
   patternMatching
   guards
   recFuncExamples
+  dataTypesExamples
