@@ -6,6 +6,7 @@ import ListComprehensions
 import Functions
 import DataTypes
 import RecursiveFunctions
+import Functors
 
 main :: IO ()
 main = do
@@ -22,3 +23,4 @@ main = do
   guards
   recFuncExamples
   dataTypesExamples
+  functorExamples
