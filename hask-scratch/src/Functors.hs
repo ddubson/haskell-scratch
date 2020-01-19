@@ -1,5 +1,22 @@
 module Functors (functorExamples, tupleFromInput) where
 
+data Person = Person {
+  firstName :: String,
+  lastName :: String,
+  age :: Int
+}
+
+personFromTuple :: (String, String, Int) -> Person
+personFromTuple (fName, lName, age) = Person fName lName age
+
+primitiveConvertTuple :: Maybe (String, String, Int) -> Maybe Person
+primitiveConvertTuple Nothing = Nothing
+primitiveConvertTuple (Just t) = Just (personFromTuple t)
+
+-- A functor takes 2 inputs, and produces 1 output
+functorConvertTuple :: Functor f => f (String, String, Int) -> f Person
+functorConvertTuple = fmap personFromTuple
+
 tupleFromInput :: String -> Maybe (String, String, Int)
 tupleFromInput input =
   if length stringComponents /= 3
@@ -11,5 +28,9 @@ tupleFromInput input =
 
 functorExamples :: IO ()
 functorExamples = do
-  -- Primitive example of a Maybe
-  putStrLn . show . tupleFromInput $ "John Doe 32"
+  -- Input of a string, is broken into a tuple, which then is converted into a
+  -- maybe of Person data type
+  let maybePerson = functorConvertTuple . tupleFromInput $ "John Doe 32"
+  case maybePerson of
+    Nothing -> print "Nothin'"
+    Just person -> print . show . age $ person
