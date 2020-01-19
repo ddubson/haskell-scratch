@@ -7,9 +7,12 @@ import Functions
 import DataTypes
 import RecursiveFunctions
 import Functors
+import ReadFromStdIn
 
 main :: IO ()
 main = do
+  print "###### Read from Stdin ######"
+  readFromStdin
   print "###### List examples ########"
   listFuncs
   print "#############################"
