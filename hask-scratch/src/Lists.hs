@@ -45,6 +45,11 @@ newGeneratedListOverRangeWithStepping = [1,3..10]
 -- Get value in a list by index
 valueAtIndexTwo = [4,5,2,6,9] !! 2
 
+-- N - number of times to replicate a number
+-- Replicates each number N times
+replicateNTimes :: Int -> [Int] -> [Int]
+replicateNTimes n arr = foldr (\x acc -> (take n (repeat x)) ++ acc) [] arr
+
 listFuncs :: IO ()
 listFuncs = do
     print headOfTeamsList
@@ -64,3 +69,4 @@ listFuncs = do
     print subListOf10Numbers
     print droppedValuesFromList
     print zippedList
+    print . replicateNTimes 5 $ [1,2,3,4,5]
