@@ -1,0 +1,69 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f985a0954e21038d14c9eae85794199aff454f0b03b1b1225af9a5cef415647a
+
+name:           hask-scratch
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/ddubson/haskell-scratch#readme>
+homepage:       https://github.com/githubuser/hask-scratch#readme
+bug-reports:    https://github.com/githubuser/hask-scratch/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/hask-scratch
+
+library
+  exposed-modules:
+      DataTypes
+      EuclidGCD
+      Functions
+      Functors
+      ListComprehensions
+      Lists
+      ReadFromStdIn
+      RecursiveFunctions
+  other-modules:
+      Paths_hask_scratch
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable hask-scratch-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_hask_scratch
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hask-scratch
+  default-language: Haskell2010
+
+test-suite hask-scratch-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hask_scratch
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hask-scratch
+  default-language: Haskell2010

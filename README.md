@@ -1,14 +1,11 @@
 # Haskell Scratch
 
-# Projects
+Examples of language constructs
 
-- `hask-scratch` - examples of language constructs
-- `echo-me` - Just reads your input and echoes it back! -- starting point for Haskell learning
+# Running the project
 
-# Running a project
-
-```
-pushd [project-name] && stack run
+```bash
+stack run
 ```
 
 # Running files
