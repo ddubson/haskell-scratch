@@ -8,6 +8,7 @@ import DataTypes
 import RecursiveFunctions
 import Functors
 import ReadFromStdIn
+import Typeclasses (typeExample)
 
 main :: IO ()
 main = do
@@ -27,3 +28,4 @@ main = do
   recFuncExamples
   dataTypesExamples
   functorExamples
+  typeExample
