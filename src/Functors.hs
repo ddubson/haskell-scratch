@@ -1,5 +1,9 @@
 module Functors (functorExamples, tupleFromInput) where
 
+-- A Functor takes a container of a (i.e. Maybe a), applies a function f, and returns a container of b (i.e Maybe b)
+-- fmap (*2) (Just 2) --> Just 4
+-- fmap (\x -> x / 5) (Nothing) --> Nothing
+
 data Person = Person {
   firstName :: String,
   lastName :: String,
