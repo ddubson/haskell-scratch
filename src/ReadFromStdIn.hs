@@ -4,5 +4,5 @@ readFromStdin :: IO ()
 readFromStdin = do
     putStrLn $ "Hello, World."
     putStrLn $ "Please enter some input: "
-    inputString <- getLine
+    inputString <- getLine -- bind the output of IO String to inputString
     putStrLn $ inputString
